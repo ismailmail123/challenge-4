@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binar Book Store</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="js/book.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-4">
+            <select class="form-select " aria-label="Disabled select example" id="bookSelect">
+                
+            </select>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success w-100" id="pickButton">Pick</button>
+        </div>
+        <div class="col-2 mt-2">
+            <div
+                    id="loading"
+                    class="spinner-border spinner-border-sm text-primary"
+            >
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+            
+        <div class="col-4 " >
+            <h5 class="text-center">Binar's Book Store</h5>
+            <img src="/images/undraw_cat.svg" alt="" class="w-100 h-100 rounded mx-auto d-block">
+        </div>
+    </div>
+    <div>
+        <div class="row mt-5">
+            <div class="col-5">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="search">
+                  </div>
+            </div>
+            <div class="col-5">
+                <select class="form-select" aria-label="Default select example" id="categorySelect">
+                    <option selected>Select by</option>
+                    <option value="1">ID</option>
+                    <option value="1">Name</option>
+                    <option value="2">Author</option>
+                    <option value="3">Price</option>
+                  </select>
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-success mb-3" id="searchBtn">Search</button>
+            </div>
+        </div>
+
+        
+          
+    </div>
+    <table class="table" id="bookTable">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    <div class="TotalHarga">
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-1">
+                <p>
+                    Total:
+                </p>
+            </div>
+            <div class="col-1">
+                <p id="total">Jumlah</p>
+            </div>
+            <div id="searchAlert" class="d-none alert alert-danger" role="alert">
+                Simple Alert !
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
